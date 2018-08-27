@@ -10,14 +10,9 @@ class MetatagCollection extends Collection
     public function toHTML()
     {
         $HTMLtags = $this->map(function ($metatag) {
-            return $this->getMetatagHTML($metatag);
+            return $metatag->toHTML();
         });
 
         return $HTMLtags->implode("\n");
-    }
-
-    public function getMetatagHTML($metatag)
-    {
-        return $metatag->HTML();
     }
 }

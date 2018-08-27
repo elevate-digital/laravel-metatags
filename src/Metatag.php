@@ -17,7 +17,7 @@ class Metatag extends Model
         return $this->morphTo();
     }
 
-    public function HTML()
+    public function toHTML()
     {
         if ($this->name === 'title') {
             return "<title>{$this->content}</title>";
